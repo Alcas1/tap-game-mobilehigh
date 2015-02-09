@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Score" sid="830755507729806" static="0" type="number">0</variable>
+        <event-block sid="5788508748691496">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5912609246867014" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">first</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="4446998423677698" type="first">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.4</param>
+                </action>
+                <action id="-10" name="Add to" sid="6657732416204748" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">int(first.Opacity)</param>
+                </action>
+                <action id="-16" name="Wait" sid="9991476192675321" type="System">
+                    <param id="0" name="Seconds">0.65</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2167842201856954">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2558355296564929" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">second</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="9510841453576585" type="second">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.4</param>
+                </action>
+                <action id="-10" name="Add to" sid="6404766173478622" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">int(second.Opacity)</param>
+                </action>
+                <action id="-16" name="Wait" sid="5139987893026194" type="System">
+                    <param id="0" name="Seconds">0.65</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4510486610247599">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3694243470570634" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">third</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="1247819509443228" type="third">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.4</param>
+                </action>
+                <action id="-10" name="Add to" sid="6495779611944624" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">int(third.Opacity)</param>
+                </action>
+                <action id="-16" name="Wait" sid="6162539468212625" type="System">
+                    <param id="0" name="Seconds">0.65</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4271968142052128">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1448166029314877" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">fourth</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="3174498730989399" type="fourth">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.4</param>
+                </action>
+                <action id="-10" name="Add to" sid="5725734555406104" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">int(fourth.Opacity)</param>
+                </action>
+                <action id="-16" name="Wait" sid="3103564116269797" type="System">
+                    <param id="0" name="Seconds">0.65</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3550094875723133">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3124560051105378">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5057974487410268" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">TiledBackground2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="9258361077256636" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6712291367594569">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6700080883318683" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5110622879615363" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7059565709631685">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5035932831642277" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="6754210373919171" type="Text">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4406675507673519">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5502659708924363" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="5023185645685463" type="System">
+                    <param id="0" name="Seconds">0.3125</param>
+                </action>
+                <action id="0" name="Play" sid="2361915637654835" type="BlankSpaces">
+                    <param id="0" name="Audio file">Taylor-Swift---Blankmp3</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6366377905587492">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7697910363823238" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="9985025268667986" type="first">
+                    <param id="0" name="X">random(862)</param>
+                    <param id="1" name="Y">random(477)</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="1830707482015631" type="first" />
+                <action id="-16" name="Wait" sid="5010373792299915" type="System">
+                    <param id="0" name="Seconds">0.625</param>
+                </action>
+                <action id="-3" name="Set position" sid="2798251725303151" type="first">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="6359866707002887" type="System">
+                    <param id="0" name="Seconds">0.625</param>
+                </action>
+                <action id="-3" name="Set position" sid="6969909198835729" type="second">
+                    <param id="0" name="X">random(862)</param>
+                    <param id="1" name="Y">random(477)</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="2189462757728899" type="second" />
+                <action id="-16" name="Wait" sid="9563779571811764" type="System">
+                    <param id="0" name="Seconds">0.625</param>
+                </action>
+                <action id="-3" name="Set position" sid="7621358891580744" type="second">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="6366071379340904" type="System">
+                    <param id="0" name="Seconds">0.625</param>
+                </action>
+                <action id="-3" name="Set position" sid="9421339831033372" type="third">
+                    <param id="0" name="X">random(862)</param>
+                    <param id="1" name="Y">random(477)</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="6170853064091566" type="third" />
+                <action id="-16" name="Wait" sid="8385725000323593" type="System">
+                    <param id="0" name="Seconds">0.625</param>
+                </action>
+                <action id="-3" name="Set position" sid="44720255382017" type="third">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="5875365036763532" type="System">
+                    <param id="0" name="Seconds">0.625</param>
+                </action>
+                <action id="-3" name="Set position" sid="8999989609543645" type="fourth">
+                    <param id="0" name="X">random(862)</param>
+                    <param id="1" name="Y">random(477)</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="5020193127445026" type="fourth" />
+                <action id="-16" name="Wait" sid="6603632432636467" type="System">
+                    <param id="0" name="Seconds">0.625</param>
+                </action>
+                <action id="-3" name="Set position" sid="5262429449332262" type="fourth">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="5806552276788079" type="System">
+                    <param id="0" name="Seconds">0.625</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
