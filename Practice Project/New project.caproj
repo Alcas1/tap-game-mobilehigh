@@ -185,8 +185,7 @@
     </global-instances>
     <sounds-folder />
     <music-folder>
-        <file name="Taylor-Swift---Blankmp3.m4a" />
-        <file name="Taylor-Swift---Blankmp3.ogg" />
+        <file name="Blank Spaces.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
