@@ -122,7 +122,7 @@
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0.313</fade-in-time>
-                                <wait-time>0.4</wait-time>
+                                <wait-time>0</wait-time>
                                 <fade-out-time>0.312</fade-out-time>
                                 <destroy>No</destroy>
                             </properties>
@@ -163,7 +163,7 @@
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0.313</fade-in-time>
-                                <wait-time>0.4</wait-time>
+                                <wait-time>0</wait-time>
                                 <fade-out-time>0.312</fade-out-time>
                                 <destroy>No</destroy>
                             </properties>

@@ -4,33 +4,6 @@
     <name>Event sheet 1</name>
     <events>
         <variable constant="0" name="Score" sid="830755507729806" static="0" type="number">0</variable>
-        <event-block sid="3053147210228418">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="5537250976514335" type="System">
-                    <param id="0" name="Interval (seconds)">0.2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="CustomMovement" id="7" name="Rotate clockwise" sid="8343437898653007" type="first">
-                    <param id="0" name="Angle">3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="4255299216884327">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="997392863931042" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="3918482038671556" type="first">
-                    <param id="0" name="X">100</param>
-                    <param id="1" name="Y">100</param>
-                </action>
-                <action behavior="CustomMovement" id="2" name="Set speed" sid="5419532415199069" type="first">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">75</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="3124560051105378">
             <conditions>
                 <condition id="6" name="On object clicked" sid="5057974487410268" type="Mouse">
@@ -79,7 +52,7 @@
                 <action id="-16" name="Wait" sid="5023185645685463" type="System">
                     <param id="0" name="Seconds">0.3125</param>
                 </action>
-                <action disabled="1" id="0" name="Play" sid="2361915637654835" type="BlankSpaces">
+                <action id="0" name="Play" sid="2361915637654835" type="BlankSpaces">
                     <param id="0" name="Audio file">Blank Spaces</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
@@ -245,7 +218,11 @@
                 </event-block>
                 <event-block sid="7031822620492179">
                     <conditions>
-                        <condition behavior="CustomMovement" id="0" name="Is moving" sid="8969007591828825" type="first" />
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="8969007591828825" type="first">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Speed">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -276,35 +253,39 @@
                 </event-block>
                 <event-block sid="3555344521786327">
                     <conditions>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="3052234012801197" type="first" />
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="3052234012801197" type="first">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Speed">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="2638497611187917">
+                        <event-block sid="4866561302944702">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="1401150437472573" type="Mouse">
+                                <condition id="6" name="On object clicked" sid="1747747790039528" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
                                     <param id="2" name="Object clicked">first</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Flash" id="0" name="Flash" sid="3204408634857966" type="first">
+                                <action behavior="Flash" id="0" name="Flash" sid="7609368810394328" type="first">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                                     <param id="2" name="Duration">0.4</param>
                                 </action>
-                                <action id="-10" name="Add to" sid="3761230177258591" type="System">
+                                <action id="-10" name="Add to" sid="6262907989993414" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">int(first.Opacity)</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="9181013979689562" type="System">
+                                <action id="-16" name="Wait" sid="221390990464619" type="System">
                                     <param id="0" name="Seconds">0.4</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="7890419375160332" type="first">
+                                <action id="-16" name="Set opacity" sid="4259455180017542" type="first">
                                     <param id="0" name="Opacity">0</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="9806828444209936" type="first">
+                                <action id="-3" name="Set position" sid="154981932960182" type="first">
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
                                 </action>
@@ -403,7 +384,11 @@
                 </event-block>
                 <event-block sid="6690248623328662">
                     <conditions>
-                        <condition behavior="CustomMovement" id="0" name="Is moving" sid="4042191742439249" type="second" />
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="4042191742439249" type="second">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Speed">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -434,13 +419,17 @@
                 </event-block>
                 <event-block sid="2302087208090549">
                     <conditions>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="9597630891658501" type="second" />
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="9597630891658501" type="second">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Speed">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="5788508748691496">
+                        <event-block sid="5563417572935175">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="5912609246867014" type="Mouse">
+                                <condition id="6" name="On object clicked" sid="6453860085714653" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
                                     <param id="2" name="Object clicked">second</param>
@@ -454,7 +443,7 @@
                                 </action>
                                 <action id="-10" name="Add to" sid="6657732416204748" type="System">
                                     <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">int(first.Opacity)</param>
+                                    <param id="1" name="Value">int(second.Opacity)</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="2247518967988298" type="System">
                                     <param id="0" name="Seconds">0.4</param>
@@ -561,7 +550,11 @@
                 </event-block>
                 <event-block sid="7489385751964077">
                     <conditions>
-                        <condition behavior="CustomMovement" id="0" name="Is moving" sid="9095041058067752" type="third" />
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="9095041058067752" type="third">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Speed">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -592,13 +585,17 @@
                 </event-block>
                 <event-block sid="2077625572442011">
                     <conditions>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="4007829783048811" type="third" />
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="4007829783048811" type="third">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Speed">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="5541320600956163">
+                        <event-block sid="5347755284807759">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="3040243589272339" type="Mouse">
+                                <condition id="6" name="On object clicked" sid="254748880244345" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
                                     <param id="2" name="Object clicked">third</param>
@@ -612,7 +609,7 @@
                                 </action>
                                 <action id="-10" name="Add to" sid="6615263074699317" type="System">
                                     <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">int(first.Opacity)</param>
+                                    <param id="1" name="Value">int(third.Opacity)</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="4365645330978165" type="System">
                                     <param id="0" name="Seconds">0.4</param>
@@ -719,7 +716,11 @@
                 </event-block>
                 <event-block sid="9969353225242339">
                     <conditions>
-                        <condition behavior="CustomMovement" id="0" name="Is moving" sid="5724398498019772" type="fourth" />
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="5724398498019772" type="fourth">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Speed">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -750,13 +751,17 @@
                 </event-block>
                 <event-block sid="5859765146308941">
                     <conditions>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="8353970451870251" type="fourth" />
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="8353970451870251" type="fourth">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Speed">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="8129560901788547">
+                        <event-block sid="7687707736581777">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="9319743537905163" type="Mouse">
+                                <condition id="6" name="On object clicked" sid="336087490483899" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
                                     <param id="2" name="Object clicked">fourth</param>
@@ -770,7 +775,7 @@
                                 </action>
                                 <action id="-10" name="Add to" sid="1628911517569723" type="System">
                                     <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">int(first.Opacity)</param>
+                                    <param id="1" name="Value">int(fourth.Opacity)</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="9465820673637551" type="System">
                                     <param id="0" name="Seconds">0.4</param>
