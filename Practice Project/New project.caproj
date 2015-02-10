@@ -20,6 +20,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -73,6 +74,9 @@
                 <behavior-type name="Fade" sid="7929747018989648">
                     <behavior id="Fade" />
                 </behavior-type>
+                <behavior-type name="CustomMovement" sid="3730809407984739">
+                    <behavior id="custom" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6957913218146312" speed="5">
@@ -108,6 +112,9 @@
                 <behavior-type name="Fade" sid="9702218281162989">
                     <behavior id="Fade" />
                 </behavior-type>
+                <behavior-type name="CustomMovement" sid="6513799699509285">
+                    <behavior id="custom" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1692356067380789" speed="5">
@@ -124,6 +131,9 @@
                 <behavior-type name="Fade" sid="3401963052723585">
                     <behavior id="Fade" />
                 </behavior-type>
+                <behavior-type name="CustomMovement" sid="6794801984837728">
+                    <behavior id="custom" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1234419681102417" speed="5">
@@ -139,6 +149,9 @@
                 </behavior-type>
                 <behavior-type name="Fade" sid="2260686337862644">
                     <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="CustomMovement" sid="4092751201229479">
+                    <behavior id="custom" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
