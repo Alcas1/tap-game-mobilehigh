@@ -80,7 +80,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6957913218146312" speed="5">
-                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502222" original-source="C:\Users\Jeff\Desktop\Practice Construct 2\Circle.png" />
+                    <frame duration="1" hotspotX="0.5025" hotspotY="0.5025" original-source="C:\Users\Jon\Pictures\Construct 2\tap.png">
+                        <collision-poly>
+                            <point x="0.1475" y="0.1475" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8525" y="0.1475" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8525" y="0.8525" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1475" y="0.8525" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -176,6 +187,7 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="2" />

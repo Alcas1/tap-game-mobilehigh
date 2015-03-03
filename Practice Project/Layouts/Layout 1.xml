@@ -2,7 +2,7 @@
 <c2layout>
     <name>Layout 1</name>
     <sid>1247231082340512</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Event sheet 2</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -100,11 +100,11 @@
                         <x>290</x>
                         <y>1038</y>
                         <z>0</z>
-                        <width>100</width>
-                        <height>100</height>
+                        <width>177.777770996</width>
+                        <height>177.777770996</height>
                         <depth>0</depth>
-                        <hotspotX>0.50222224</hotspotX>
-                        <hotspotY>0.50222224</hotspotY>
+                        <hotspotX>0.502499998</hotspotX>
+                        <hotspotY>0.502499998</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
