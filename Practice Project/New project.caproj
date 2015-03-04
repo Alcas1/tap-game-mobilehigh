@@ -11,6 +11,7 @@
     <saved-with-version>19500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -18,6 +19,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
@@ -77,19 +79,22 @@
                 <behavior-type name="CustomMovement" sid="3730809407984739">
                     <behavior id="custom" />
                 </behavior-type>
+                <behavior-type name="Bullet" sid="264516150921102">
+                    <behavior id="Bullet" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6957913218146312" speed="5">
-                    <frame duration="1" hotspotX="0.5025" hotspotY="0.5025" original-source="C:\Users\Jon\Pictures\Construct 2\tap.png">
+                    <frame duration="1" hotspotX="0.50303" hotspotY="0.50303" original-source="C:\Users\Jon\Pictures\Construct 2\tap.png">
                         <collision-poly>
-                            <point x="0.1475" y="0.1475" />
-                            <point x="0.5" y="0" />
-                            <point x="0.8525" y="0.1475" />
-                            <point x="1" y="0.5" />
-                            <point x="0.8525" y="0.8525" />
-                            <point x="0.5" y="1" />
-                            <point x="0.1475" y="0.8525" />
-                            <point x="0" y="0.5" />
+                            <point x="0.153217" y="0.153217" />
+                            <point x="0.5" y="0.00810917" />
+                            <point x="0.846783" y="0.153217" />
+                            <point x="0.991891" y="0.5" />
+                            <point x="0.846783" y="0.846783" />
+                            <point x="0.5" y="0.991891" />
+                            <point x="0.153217" y="0.846783" />
+                            <point x="0.00810917" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -180,6 +185,42 @@
         <object-type name="BlankSpaces" sid="6464526679866517">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="Sprite2" sid="4258248190454619">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="651336270656749" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="2508251683561912">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9273808171208222" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="2405593856915745">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420021326029982" speed="5">
+                    <frame duration="1" hotspotX="0.25" hotspotY="0.475" original-source="C:\Users\Jon\Pictures\Construct 2\path.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.625" y="0.375" />
+                            <point x="0.845" y="0.5" />
+                            <point x="0.575" y="0.575" />
+                            <point x="0.425" y="0.575" />
+                            <point x="0.1675" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="4507169251426595">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -207,6 +248,7 @@
                 <doppler-factor>1</doppler-factor>
             </properties>
         </global-instance>
+        <global-instance type="Function" uid="9" />
     </global-instances>
     <sounds-folder />
     <music-folder>

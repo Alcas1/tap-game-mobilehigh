@@ -3,22 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 2</name>
     <events>
+        <variable constant="0" name="x" sid="7296311385571497" static="0" type="number">0</variable>
+        <variable constant="0" name="y" sid="2331343709466931" static="0" type="number">0</variable>
+        <variable constant="0" name="bool" sid="2654077471499017" static="0" type="number">0</variable>
         <variable constant="0" name="Score2" sid="6884749096248467" static="0" type="number">0</variable>
-        <event-block sid="3531712234372035">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="7655008108566393" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">TiledBackground2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="4401213565861893" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Value">50</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="1049697548857679">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="9282184928440337" type="System">
@@ -39,8 +27,20 @@
                 <condition id="-1" name="Every tick" sid="8477193338668858" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="4585869254730398" type="Text">
-                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                <action id="0" name="Set text" sid="2330637221790888" type="Text">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score &amp;&quot; &quot; &amp;time</param>
+                </action>
+                <action id="-9" name="Set value" sid="6249845546864777" type="System">
+                    <param id="0" name="Variable">Score2</param>
+                    <param id="1" name="Value">distance(first.X,first.Y,450,200)</param>
+                </action>
+                <action id="0" name="Call function" sid="6174287908554794" type="Function">
+                    <param id="0" name="Name">&quot;move_stop&quot;</param>
+                    <param id="1" name="Parameter {n}">2{###}200{###}250</param>
+                </action>
+                <action id="0" name="Call function" sid="7380093882157635" type="Function">
+                    <param id="0" name="Name">&quot;move_stop&quot;</param>
+                    <param id="1" name="Parameter {n}">7{###}300{###}100</param>
                 </action>
             </actions>
         </event-block>
@@ -49,713 +49,94 @@
                 <condition id="-2" name="On start of layout" sid="4354558235465128" type="System" />
             </conditions>
             <actions>
-                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="5395386681176243" type="first">
-                    <param id="0" name="Angle">-95</param>
-                </action>
                 <action disabled="1" id="-16" name="Wait" sid="2170861252743636" type="System">
                     <param id="0" name="Seconds">0.3125</param>
                 </action>
-                <action disabled="1" id="0" name="Play" sid="5273823488365641" type="BlankSpaces">
+                <action id="0" name="Play" sid="5273823488365641" type="BlankSpaces">
                     <param id="0" name="Audio file">Blank Spaces</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="7204280454931765" type="first">
+                    <param id="0" name="Speed">0</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="6246678529688887">
+        <event-block sid="7758189230490421">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="2874190554104698" type="System">
-                    <param id="0" name="Interval (seconds)">1.9</param>
+                <condition id="0" name="On function" sid="7681268984322903" type="Function">
+                    <param id="0" name="Name">&quot;spawn_move&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="7767522030947039" type="first">
-                    <param id="0" name="Angle">-95</param>
+                <action id="-16" name="Set opacity" sid="9442350274227978" type="first">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-3" name="Set position" sid="643395200403671" type="Sprite5">
+                    <param id="0" name="X">Function.Param(0)</param>
+                    <param id="1" name="Y">Function.Param(1)</param>
                 </action>
                 <action id="-3" name="Set position" sid="863873796600286" type="first">
-                    <param id="0" name="X">400</param>
-                    <param id="1" name="Y">200</param>
+                    <param id="0" name="X">Function.Param(0)</param>
+                    <param id="1" name="Y">Function.Param(1)</param>
                 </action>
-                <action behavior="CustomMovement" id="2" name="Set speed" sid="738568930653894" type="first">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">200</param>
+                <action id="-22" name="Set angle toward position" sid="4087419646054457" type="first">
+                    <param id="0" name="X">Function.Param(0)+220</param>
+                    <param id="1" name="Y">Function.Param(1)</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="8114365558022509">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="7005644791868751" type="System">
-                    <param id="0" name="Interval (seconds)">0.1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="CustomMovement" id="7" name="Rotate clockwise" sid="4866151186682919" type="first">
-                    <param id="0" name="Angle">10</param>
+                <action behavior="Bullet" id="0" name="Set speed" sid="8514000787378316" type="first">
+                    <param id="0" name="Speed">100</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2181836096577696">
+        <event-block sid="7562286031264836">
             <conditions>
-                <condition id="7" name="Cursor is over object" sid="3668651230913751" type="Mouse">
-                    <param id="0" name="Object">first</param>
+                <condition id="0" name="On function" sid="258011420076988" type="Function">
+                    <param id="0" name="Name">&quot;move_stop&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="194994305133381">
+                <event-block sid="5971874674461315">
                     <conditions>
-                        <condition id="7" name="Cursor is over object" sid="1077183617503992" type="Mouse">
-                            <param id="0" name="Object">first</param>
+                        <condition id="-7" name="Compare time" sid="3538870677291242" type="System">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Time (seconds)">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-7" name="Compare time" sid="8705317702223899" type="System">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Time (seconds)">Function.Param(0)+0.05</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="4737222654395579">
-                            <conditions>
-                                <condition behavior="CustomMovement" id="0" name="Is moving" sid="165908526175693" type="first" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="580131745350234">
-                                    <conditions>
-                                        <condition id="2" name="Mouse button is down" sid="7339306329607567" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="6771021096637352">
-                                            <conditions>
-                                                <condition id="-6" name="Every X seconds" sid="5295040741701634" type="System">
-                                                    <param id="0" name="Interval (seconds)">0.05</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="4617462611019581" type="System">
-                                                    <param id="0" name="Variable">Score</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="9876346556796366">
-                            <conditions>
-                                <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="9497411319094982" type="first" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="5177537285112957">
-                                    <conditions>
-                                        <condition id="6" name="On object clicked" sid="2399958770769819" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                            <param id="1" name="Click type">0</param>
-                                            <param id="2" name="Object clicked">first</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Flash" id="0" name="Flash" sid="3577201731542974" type="first">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">0.4</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="9285584903074766" type="System">
-                                            <param id="0" name="Variable">Score</param>
-                                            <param id="1" name="Value">int(first.Opacity)</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="2475978818834135" type="System">
-                                            <param id="0" name="Seconds">0.4</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="7569313386222083" type="first">
-                                            <param id="0" name="Opacity">0</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="3269816558967645" type="first">
-                                            <param id="0" name="X">-100</param>
-                                            <param id="1" name="Y">-100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3228963202378075" type="System">
+                            <param id="0" name="Variable">x</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3079810268885165" type="System">
+                            <param id="0" name="Variable">y</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3008194659563463" type="Function">
+                            <param id="0" name="Name">&quot;spawn_move&quot;</param>
+                            <param id="1" name="Parameter {n}">x{###}y</param>
+                        </action>
+                    </actions>
                 </event-block>
-                <event-block sid="4602086693074898">
+                <event-block sid="142488170636257">
                     <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="3051148211536357" type="first">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Speed">0</param>
+                        <condition id="-8" name="Compare two values" sid="2962627042776743" type="System">
+                            <param id="0" name="First value">distance(first.X,first.Y,x+220,y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">20</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="1875711407989066">
-                            <conditions>
-                                <condition id="2" name="Mouse button is down" sid="8263263484336238" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="5381569309865157">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="6279389001378953" type="System">
-                                            <param id="0" name="Interval (seconds)">0.05</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="6713982197207281" type="System">
-                                            <param id="0" name="Variable">Score</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="327226725078901">
-                    <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="6187597271376169" type="first">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="835843118675847">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="9580997374373241" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">first</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Flash" id="0" name="Flash" sid="4006993438779945" type="first">
-                                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.4</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="4828849029856219" type="System">
-                                    <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">int(first.Opacity)</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="9782499174624428" type="System">
-                                    <param id="0" name="Seconds">0.4</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="4434742135669617" type="first">
-                                    <param id="0" name="Opacity">0</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="1631343892119252" type="first">
-                                    <param id="0" name="X">-100</param>
-                                    <param id="1" name="Y">-100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="6704924867186984">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="7756228253755716" type="Mouse">
-                    <param id="0" name="Object">second</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="9428303747763811">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="5028817356150151" type="Mouse">
-                            <param id="0" name="Object">second</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7483605835292063">
-                            <conditions>
-                                <condition behavior="CustomMovement" id="0" name="Is moving" sid="2513496086336447" type="first" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="2716408086252364">
-                                    <conditions>
-                                        <condition id="2" name="Mouse button is down" sid="6256976934578117" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="9420792952054934">
-                                            <conditions>
-                                                <condition id="-6" name="Every X seconds" sid="2045204912692574" type="System">
-                                                    <param id="0" name="Interval (seconds)">0.05</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="5982476743909332" type="System">
-                                                    <param id="0" name="Variable">Score</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="3511976215188419">
-                            <conditions>
-                                <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="3434516119872369" type="first" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="3726580763999565">
-                                    <conditions>
-                                        <condition id="6" name="On object clicked" sid="8607212257062142" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                            <param id="1" name="Click type">0</param>
-                                            <param id="2" name="Object clicked">first</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Flash" id="0" name="Flash" sid="8701036471750533" type="first">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">0.4</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="8069615889739127" type="System">
-                                            <param id="0" name="Variable">Score</param>
-                                            <param id="1" name="Value">int(first.Opacity)</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="2192586146497233" type="System">
-                                            <param id="0" name="Seconds">0.4</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="1335440202691318" type="first">
-                                            <param id="0" name="Opacity">0</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="5262590154765762" type="first">
-                                            <param id="0" name="X">-100</param>
-                                            <param id="1" name="Y">-100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="7807053757337761">
-                    <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="3487655034138763" type="second">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="1064421013528701">
-                            <conditions>
-                                <condition id="2" name="Mouse button is down" sid="1590031264500458" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="9227956599440753">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="9429230383977606" type="System">
-                                            <param id="0" name="Interval (seconds)">0.05</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="6912546561627302" type="System">
-                                            <param id="0" name="Variable">Score</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="1463424303188317">
-                    <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="5981830249989823" type="second">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="3454987961373982">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="1442118099973636" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">second</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Flash" id="0" name="Flash" sid="2256153031061601" type="second">
-                                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.4</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="8695025067015637" type="System">
-                                    <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">int(second.Opacity)</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="8738930198817449" type="System">
-                                    <param id="0" name="Seconds">0.4</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="7832557348712027" type="second">
-                                    <param id="0" name="Opacity">0</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="4536157347166312" type="second">
-                                    <param id="0" name="X">-100</param>
-                                    <param id="1" name="Y">-100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="5598279424941662">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="5038532303443784" type="Mouse">
-                    <param id="0" name="Object">third</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="2039044023214056">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="2932652915133685" type="Mouse">
-                            <param id="0" name="Object">third</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="5252525601025672">
-                            <conditions>
-                                <condition behavior="CustomMovement" id="0" name="Is moving" sid="2527957658559597" type="first" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="1971561292949315">
-                                    <conditions>
-                                        <condition id="2" name="Mouse button is down" sid="7869920720009175" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="474969187181735">
-                                            <conditions>
-                                                <condition id="-6" name="Every X seconds" sid="9259123863823997" type="System">
-                                                    <param id="0" name="Interval (seconds)">0.05</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="8412486322958423" type="System">
-                                                    <param id="0" name="Variable">Score</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="4306409189818236">
-                            <conditions>
-                                <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="3570583771647339" type="first" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="2981187610143522">
-                                    <conditions>
-                                        <condition id="6" name="On object clicked" sid="2392019975850385" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                            <param id="1" name="Click type">0</param>
-                                            <param id="2" name="Object clicked">first</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Flash" id="0" name="Flash" sid="8991978662671543" type="first">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">0.4</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="7047236282553104" type="System">
-                                            <param id="0" name="Variable">Score</param>
-                                            <param id="1" name="Value">int(first.Opacity)</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="6144273626737363" type="System">
-                                            <param id="0" name="Seconds">0.4</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="1592802346240002" type="first">
-                                            <param id="0" name="Opacity">0</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="5624264392425302" type="first">
-                                            <param id="0" name="X">-100</param>
-                                            <param id="1" name="Y">-100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="389293471085469">
-                    <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="6744872605668673" type="third">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7823476402859909">
-                            <conditions>
-                                <condition id="2" name="Mouse button is down" sid="199062297057202" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="8619917919256766">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="2350410554158664" type="System">
-                                            <param id="0" name="Interval (seconds)">0.05</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="6913714226798601" type="System">
-                                            <param id="0" name="Variable">Score</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="2567912296088182">
-                    <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="634160673653897" type="third">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="197344794898142">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="6270625146780544" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">third</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Flash" id="0" name="Flash" sid="1272881843989385" type="third">
-                                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.4</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="7499872617874161" type="System">
-                                    <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">int(third.Opacity)</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="6368394904922416" type="System">
-                                    <param id="0" name="Seconds">0.4</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="7544619376463333" type="third">
-                                    <param id="0" name="Opacity">0</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="2319703518119157" type="third">
-                                    <param id="0" name="X">-100</param>
-                                    <param id="1" name="Y">-100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="6151126938011451">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="6335444531470668" type="Mouse">
-                    <param id="0" name="Object">fourth</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="2862986165706206">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="5612290579321105" type="Mouse">
-                            <param id="0" name="Object">fourth</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7831488171004536">
-                            <conditions>
-                                <condition behavior="CustomMovement" id="0" name="Is moving" sid="2307631983115586" type="first" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="9308477571812237">
-                                    <conditions>
-                                        <condition id="2" name="Mouse button is down" sid="898898722311633" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="8629815450298025">
-                                            <conditions>
-                                                <condition id="-6" name="Every X seconds" sid="5411998738277646" type="System">
-                                                    <param id="0" name="Interval (seconds)">0.05</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="5014910245093752" type="System">
-                                                    <param id="0" name="Variable">Score</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="5299879555411533">
-                            <conditions>
-                                <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="282569912572082" type="first" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="7962513898564052">
-                                    <conditions>
-                                        <condition id="6" name="On object clicked" sid="7460458725534219" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                            <param id="1" name="Click type">0</param>
-                                            <param id="2" name="Object clicked">first</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Flash" id="0" name="Flash" sid="3084602224702508" type="first">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">0.4</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="2222494516341488" type="System">
-                                            <param id="0" name="Variable">Score</param>
-                                            <param id="1" name="Value">int(first.Opacity)</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="3872343438631467" type="System">
-                                            <param id="0" name="Seconds">0.4</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="9126713889679698" type="first">
-                                            <param id="0" name="Opacity">0</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="8018596654271504" type="first">
-                                            <param id="0" name="X">-100</param>
-                                            <param id="1" name="Y">-100</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="2128646792472225">
-                    <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="3038038144822807" type="fourth">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7830286815824302">
-                            <conditions>
-                                <condition id="2" name="Mouse button is down" sid="9657615414067705" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="1903311682973778">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="8160692046269317" type="System">
-                                            <param id="0" name="Interval (seconds)">0.05</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="4878537151029716" type="System">
-                                            <param id="0" name="Variable">Score</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="3129131149540047">
-                    <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="9473146003541731" type="fourth">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="9345846023934624">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="2193378245953815" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">fourth</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Flash" id="0" name="Flash" sid="6071764391386375" type="fourth">
-                                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">1.0</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="8499503327007696" type="System">
-                                    <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">int(fourth.Opacity)</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="1638417009072296" type="System">
-                                    <param id="0" name="Seconds">0.4</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="3871264434763688" type="fourth">
-                                    <param id="0" name="Opacity">0</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="4584131965641613" type="fourth">
-                                    <param id="0" name="X">-100</param>
-                                    <param id="1" name="Y">-100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="6378421811343798" type="first">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>

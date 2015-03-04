@@ -93,18 +93,28 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>290</x>
-                        <y>1038</y>
+                        <x>294</x>
+                        <y>832</y>
                         <z>0</z>
-                        <width>177.777770996</width>
-                        <height>177.777770996</height>
+                        <width>73.333328247</width>
+                        <height>73.333328247</height>
                         <depth>0</depth>
-                        <hotspotX>0.502499998</hotspotX>
-                        <hotspotY>0.502499998</hotspotY>
+                        <hotspotX>0.5030303</hotspotX>
+                        <hotspotY>0.5030303</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -230,6 +240,28 @@
                         <hotspotY>0.50222224</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite5" uid="8">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>680</x>
+                        <y>838</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>400</height>
+                        <depth>0</depth>
+                        <hotspotX>0.25</hotspotX>
+                        <hotspotY>0.474999994</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
