@@ -6,7 +6,7 @@
         <variable constant="0" name="x" sid="7296311385571497" static="0" type="number">0</variable>
         <variable constant="0" name="y" sid="2331343709466931" static="0" type="number">0</variable>
         <variable constant="0" name="bool" sid="2654077471499017" static="0" type="number">0</variable>
-        <variable constant="0" name="Score2" sid="6884749096248467" static="0" type="number">0</variable>
+        <variable constant="0" name="speed" sid="6884749096248467" static="0" type="number">0</variable>
         <event-block sid="1049697548857679">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="9282184928440337" type="System">
@@ -28,11 +28,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="2330637221790888" type="Text">
-                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score &amp;&quot; &quot; &amp;time</param>
-                </action>
-                <action id="-9" name="Set value" sid="6249845546864777" type="System">
-                    <param id="0" name="Variable">Score2</param>
-                    <param id="1" name="Value">distance(first.X,first.Y,450,200)</param>
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score </param>
                 </action>
                 <action id="0" name="Call function" sid="6174287908554794" type="Function">
                     <param id="0" name="Name">&quot;move_stop&quot;</param>
@@ -51,7 +47,12 @@
                             <param id="1" name="Speed">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="7134073044078861" type="System">
+                            <param id="0" name="Variable">speed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="7662740090399408">
                             <conditions>
@@ -77,6 +78,84 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="8432156851337588">
+                    <conditions>
+                        <condition behavior="Bullet" id="0" name="Compare speed" sid="9827380870863351" type="first">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7537265203046639">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="2615124185946457" type="Touch">
+                                    <param id="0" name="Object">first</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="1036243301282618" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">50</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="2825217039153644" type="first">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7430172741075437">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1272241540933721" type="System">
+                            <param id="0" name="Variable">speed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9960645171374962">
+                            <conditions>
+                                <condition behavior="Bullet" id="0" name="Compare speed" sid="5360323549120292" type="first">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1312823180569396" type="System">
+                                    <param id="0" name="Variable">speed</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9488634723490622">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7369268609996432" type="System">
+                            <param id="0" name="Variable">speed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="5284019110570064" type="first">
+                            <param id="0" name="X">-200</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="4362033627273168" type="Sprite5">
+                            <param id="0" name="X">-200</param>
+                            <param id="1" name="Y">-200</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1941776916330588" type="System">
+                            <param id="0" name="Variable">speed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
