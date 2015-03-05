@@ -9,11 +9,7 @@
         </event-block>
         <event-block sid="8101494832815362">
             <conditions>
-                <condition id="6" name="On object clicked" sid="1885383404816553" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">Text2</param>
-                </condition>
+                <condition id="14" name="On tap" sid="1885383404816553" type="Touch" />
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="4478152767543958" type="System">

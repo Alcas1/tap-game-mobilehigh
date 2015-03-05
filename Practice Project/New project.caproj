@@ -268,6 +268,7 @@
     <sounds-folder />
     <music-folder>
         <file name="Blank Spaces.ogg" />
+        <file name="Demo25.m4a" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
