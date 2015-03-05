@@ -7,6 +7,7 @@
         <variable constant="0" name="y" sid="2331343709466931" static="0" type="number">0</variable>
         <variable constant="0" name="bool" sid="2654077471499017" static="0" type="number">0</variable>
         <variable constant="0" name="speed" sid="6884749096248467" static="0" type="number">0</variable>
+        <variable constant="0" name="scorable" sid="264021998727257" static="0" type="number">0</variable>
         <event-block sid="1049697548857679">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="9282184928440337" type="System">
@@ -30,13 +31,37 @@
                 <action id="0" name="Set text" sid="2330637221790888" type="Text">
                     <param id="0" name="Text">&quot;Score: &quot; &amp; Score </param>
                 </action>
-                <action id="0" name="Call function" sid="6174287908554794" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="6174287908554794" type="Function">
                     <param id="0" name="Name">&quot;move_stop&quot;</param>
-                    <param id="1" name="Parameter {n}">2{###}200{###}250</param>
+                    <param id="1" name="Parameter {n}">1{###}200{###}250</param>
                 </action>
-                <action id="0" name="Call function" sid="7380093882157635" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="7380093882157635" type="Function">
                     <param id="0" name="Name">&quot;move_stop&quot;</param>
-                    <param id="1" name="Parameter {n}">7{###}300{###}100</param>
+                    <param id="1" name="Parameter {n}">4{###}300{###}100</param>
+                </action>
+                <action id="0" name="Call function" sid="3237415672248373" type="Function">
+                    <param id="0" name="Name">&quot;spawn_tap&quot;</param>
+                    <param id="1" name="Parameter {n}">1{###}300{###}400</param>
+                </action>
+                <action id="0" name="Call function" sid="1536875900023668" type="Function">
+                    <param id="0" name="Name">&quot;spawn_tap&quot;</param>
+                    <param id="1" name="Parameter {n}">3{###}400{###}400</param>
+                </action>
+                <action id="0" name="Call function" sid="8464862511165687" type="Function">
+                    <param id="0" name="Name">&quot;spawn_tap&quot;</param>
+                    <param id="1" name="Parameter {n}">5{###}100{###}250</param>
+                </action>
+                <action id="0" name="Call function" sid="9247392192284406" type="Function">
+                    <param id="0" name="Name">&quot;spawn_tap&quot;</param>
+                    <param id="1" name="Parameter {n}">7{###}400{###}100</param>
+                </action>
+                <action id="0" name="Call function" sid="9904452645798141" type="Function">
+                    <param id="0" name="Name">&quot;spawn_tap&quot;</param>
+                    <param id="1" name="Parameter {n}">9{###}250{###}100</param>
+                </action>
+                <action id="0" name="Call function" sid="8608736846450088" type="Function">
+                    <param id="0" name="Name">&quot;spawn_tap&quot;</param>
+                    <param id="1" name="Parameter {n}">11{###}100{###}100</param>
                 </action>
             </actions>
             <sub-events>
@@ -93,16 +118,46 @@
                                 <condition id="17" name="On tap object" sid="2615124185946457" type="Touch">
                                     <param id="0" name="Object">first</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="8805290943413762" type="System">
+                                    <param id="0" name="Variable">scorable</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Add to" sid="1036243301282618" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">50</param>
                                 </action>
-                                <action behavior="Flash" id="0" name="Flash" sid="2825217039153644" type="first">
-                                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.5</param>
+                                <action id="-9" name="Set value" sid="5045986784791649" type="System">
+                                    <param id="0" name="Variable">scorable</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="815609285983824" type="first">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7450688131738693" type="System">
+                                    <param id="0" name="Seconds">0.08</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="7988271069505784" type="first">
+                                    <param id="0" name="Scale">0.45</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="3258880186585926" type="first">
+                                    <param id="0" name="Fade-in time">0</param>
+                                </action>
+                                <action behavior="Fade" id="3" name="Set wait time" sid="9416238828951805" type="first">
+                                    <param id="0" name="Wait time">0</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="2835189154268598" type="first">
+                                    <param id="0" name="Fade-out time">0.25</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="7223883322073778" type="first" />
+                                <action id="-16" name="Wait" sid="1669302891484398" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="9016250574404404" type="first">
+                                    <param id="0" name="X">-200</param>
+                                    <param id="1" name="Y">-200</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -281,6 +336,31 @@
                         <action id="-3" name="Set position" sid="9249940931662537" type="first">
                             <param id="0" name="X">Function.Param(1)</param>
                             <param id="1" name="Y">Function.Param(2)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6565527415976955" type="System">
+                            <param id="0" name="Variable">scorable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="9274288960398977" type="first">
+                            <param id="0" name="Fade-in time">0.25</param>
+                        </action>
+                        <action behavior="Fade" id="3" name="Set wait time" sid="6337542646304576" type="first">
+                            <param id="0" name="Wait time">1</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="6948993451805632" type="first">
+                            <param id="0" name="Fade-out time">0.25</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="6147838515793419" type="first" />
+                        <action id="-16" name="Wait" sid="9057124003677812" type="System">
+                            <param id="0" name="Seconds">1.6</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2469081554425398" type="System">
+                            <param id="0" name="Variable">scorable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1450958975859296" type="first">
+                            <param id="0" name="X">-200</param>
+                            <param id="1" name="Y">-200</param>
                         </action>
                     </actions>
                 </event-block>
