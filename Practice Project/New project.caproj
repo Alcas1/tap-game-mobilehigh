@@ -13,11 +13,13 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -36,7 +38,7 @@
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
     <first-layout>Menu</first-layout>
-    <use-loader-layout>0</use-loader-layout>
+    <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
@@ -184,9 +186,6 @@
         <object-type name="Text" sid="9752436446306622">
             <plugin id="Text" />
         </object-type>
-        <object-type name="BlankSpaces" sid="6464526679866517">
-            <plugin id="Audio" />
-        </object-type>
         <object-type name="Sprite2" sid="4258248190454619">
             <plugin id="Sprite" />
             <animation-folder>
@@ -229,6 +228,20 @@
         <object-type name="Text2" sid="3912303364462753">
             <plugin id="Text" />
         </object-type>
+        <object-type name="ProgressBar" sid="7740373567137271">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="Audio" sid="3436106136447898">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="TiledBackground3" sid="6929389640623275">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Particles" sid="8772695440336477">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -242,11 +255,17 @@
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="2" />
-        <global-instance type="BlankSpaces" uid="7">
+        <global-instance type="Function" uid="9" />
+        <global-instance type="Touch" uid="10">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="7">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
-                <play-in-background>Yes</play-in-background>
+                <play-in-background>No</play-in-background>
                 <positioned-audio></positioned-audio>
                 <panning-model>HRTF</panning-model>
                 <distance-model>Inverse</distance-model>
@@ -258,17 +277,12 @@
                 <doppler-factor>1</doppler-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="9" />
-        <global-instance type="Touch" uid="10">
-            <properties>
-                <use-mouse-input>Yes</use-mouse-input>
-            </properties>
-        </global-instance>
     </global-instances>
     <sounds-folder />
     <music-folder>
         <file name="Blank Spaces.ogg" />
         <file name="Demo25.m4a" />
+        <file name="Demo53.m4a" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

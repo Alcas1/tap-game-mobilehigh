@@ -29,7 +29,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="2330637221790888" type="Text">
-                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score </param>
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score &amp;&quot; &quot; &amp;fps</param>
                 </action>
                 <action disabled="1" id="0" name="Call function" sid="6174287908554794" type="Function">
                     <param id="0" name="Name">&quot;move_stop&quot;</param>
@@ -226,14 +226,15 @@
                 <action disabled="1" id="-16" name="Wait" sid="2170861252743636" type="System">
                     <param id="0" name="Seconds">0.3125</param>
                 </action>
-                <action id="0" name="Play" sid="5273823488365641" type="BlankSpaces">
-                    <param id="0" name="Audio file">Blank Spaces</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="7204280454931765" type="first">
                     <param id="0" name="Speed">0</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="2096698126030172" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;Blank Spaces&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;blankspace&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -379,6 +380,42 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="9195984692367368">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3850145412931489" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare time" sid="7256400741363384" type="System">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Time (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="3" name="Set progress" sid="9015260046475303" type="ProgressBar">
+                    <param id="0" name="Value">(time/Audio.Duration(&quot;blankspace&quot;))*100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7525236088672059">
+            <conditions>
+                <condition id="14" name="On tap" sid="5298787565434577" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="8243369962809273" type="Particles">
+                    <param id="0" name="X">Touch.X</param>
+                    <param id="1" name="Y">Touch.Y</param>
+                </action>
+                <action id="1" name="Set rate" sid="929075048508005" type="Particles">
+                    <param id="0" name="Rate">300</param>
+                </action>
+                <action id="-16" name="Wait" sid="538519361879709" type="System">
+                    <param id="0" name="Seconds">0.08</param>
+                </action>
+                <action id="1" name="Set rate" sid="2330938842680543" type="Particles">
+                    <param id="0" name="Rate">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
