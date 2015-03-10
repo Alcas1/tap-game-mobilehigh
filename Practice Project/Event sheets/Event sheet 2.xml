@@ -61,7 +61,7 @@
                 </action>
                 <action id="0" name="Call function" sid="8608736846450088" type="Function">
                     <param id="0" name="Name">&quot;spawn_tap&quot;</param>
-                    <param id="1" name="Parameter {n}">11{###}100{###}100</param>
+                    <param id="1" name="Parameter {n}">15{###}100{###}100</param>
                 </action>
             </actions>
             <sub-events>
@@ -158,10 +158,6 @@
                                 <action id="-3" name="Set position" sid="9016250574404404" type="first">
                                     <param id="0" name="X">-200</param>
                                     <param id="1" name="Y">-200</param>
-                                </action>
-                                <action id="-29" name="Move to object" sid="4676082429371659" type="Text2">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Object">first</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -345,16 +341,26 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-10" name="Set value" sid="1922183444235788" type="first">
+                            <param id="0" name="Instance variable">countdown</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2092166304020856" type="first_countdown">
+                            <param id="0" name="Text">first.countdown</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="8667129518788856" type="first_countdown">
+                            <param id="0" name="X">Function.Param(1)</param>
+                            <param id="1" name="Y">Function.Param(2)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6288085585297689" type="first_countdown">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="5837392146841936" type="first">
                             <param id="0" name="Speed">0</param>
                         </action>
                         <action id="-3" name="Set position" sid="9249940931662537" type="first">
                             <param id="0" name="X">Function.Param(1)</param>
                             <param id="1" name="Y">Function.Param(2)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="6565527415976955" type="System">
-                            <param id="0" name="Variable">scorable</param>
-                            <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Fade" id="2" name="Set fade-in time" sid="9274288960398977" type="first">
                             <param id="0" name="Fade-in time">3</param>
@@ -367,7 +373,17 @@
                         </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="6147838515793419" type="first" />
                         <action id="-16" name="Wait" sid="9057124003677812" type="System">
-                            <param id="0" name="Seconds">4.3</param>
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6565527415976955" type="System">
+                            <param id="0" name="Variable">scorable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9113361073673236" type="first_countdown">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1851976257084846" type="System">
+                            <param id="0" name="Seconds">1.8</param>
                         </action>
                         <action id="-9" name="Set value" sid="2469081554425398" type="System">
                             <param id="0" name="Variable">scorable</param>
@@ -376,6 +392,22 @@
                         <action id="-3" name="Set position" sid="1450958975859296" type="first">
                             <param id="0" name="X">-200</param>
                             <param id="1" name="Y">-200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2402682329838179">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="1661497062900533" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="9750833295469603" type="first">
+                            <param id="0" name="Instance variable">countdown</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1641671241674739" type="first_countdown">
+                            <param id="0" name="Text">first.countdown</param>
                         </action>
                     </actions>
                 </event-block>
@@ -397,9 +429,9 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7525236088672059">
+        <event-block any="1" sid="7525236088672059">
             <conditions>
-                <condition id="14" name="On tap" sid="5298787565434577" type="Touch" />
+                <condition id="0" name="On any touch start" sid="5298787565434577" type="Touch" />
             </conditions>
             <actions>
                 <action id="-3" name="Set position" sid="8243369962809273" type="Particles">

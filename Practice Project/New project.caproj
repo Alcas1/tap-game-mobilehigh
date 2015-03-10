@@ -73,6 +73,9 @@
         </object-type>
         <object-type name="first" sid="6014427815575477">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="countdown" sid="6761472030949421" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Flash" sid="7600852400391658">
                     <behavior id="Flash" />
@@ -225,9 +228,6 @@
         <object-type name="Touch" sid="3991741647068417">
             <plugin id="Touch" />
         </object-type>
-        <object-type name="Text2" sid="3912303364462753">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="ProgressBar" sid="7740373567137271">
             <plugin id="progressbar" />
         </object-type>
@@ -241,6 +241,12 @@
         <object-type name="Particles" sid="8772695440336477">
             <plugin id="Particles" />
             <texture />
+        </object-type>
+        <object-type name="TextBox2" sid="2737995691552732">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="first_countdown" sid="57626170969767">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
