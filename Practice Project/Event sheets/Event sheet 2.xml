@@ -29,7 +29,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="2330637221790888" type="Text">
-                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score &amp;&quot; &quot; &amp;fps</param>
+                    <param id="0" name="Text">Score</param>
                 </action>
                 <action disabled="1" id="0" name="Call function" sid="6174287908554794" type="Function">
                     <param id="0" name="Name">&quot;move_stop&quot;</param>

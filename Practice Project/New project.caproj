@@ -61,7 +61,7 @@
         </object-type>
         <object-type name="TiledBackground2" sid="1722878872964199">
             <plugin id="TiledBg" />
-            <texture original-source="C:\Users\Jeff\Desktop\Practice Construct 2\Background.jpg" />
+            <texture original-source="C:\Users\Jeff\Desktop\Construct 2 Projects\Practice Project\MobiLehighBackgroundMain.png" />
         </object-type>
         <object-type name="Sprite" sid="7340297677307272">
             <plugin id="Sprite" />
