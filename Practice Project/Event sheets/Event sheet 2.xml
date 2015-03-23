@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 2</name>
     <events>
+        <variable constant="0" name="TimeVar" sid="8390379144250916" static="0" type="number">0</variable>
         <variable constant="0" name="x" sid="7296311385571497" static="0" type="number">0</variable>
         <variable constant="0" name="y" sid="2331343709466931" static="0" type="number">0</variable>
         <variable constant="0" name="bool" sid="2654077471499017" static="0" type="number">0</variable>
@@ -244,6 +245,10 @@
                     <param id="0" name="Variable">songLength</param>
                     <param id="1" name="Value">Audio.Duration(&quot;blankspace&quot;)</param>
                 </action>
+                <action id="-10" name="Add to" sid="9535678113573617" type="System">
+                    <param id="0" name="Variable">TimeVar</param>
+                    <param id="1" name="Value">time</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7758189230490421">
@@ -343,11 +348,11 @@
                     <conditions>
                         <condition id="-7" name="Compare time" sid="8249102507813232" type="System">
                             <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Time (seconds)">Function.Param(0)</param>
+                            <param id="1" name="Time (seconds)">Function.Param(0)+TimeVar</param>
                         </condition>
                         <condition id="-7" name="Compare time" sid="7687632288395425" type="System">
                             <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Time (seconds)">Function.Param(0)+0.08</param>
+                            <param id="1" name="Time (seconds)">Function.Param(0)+0.08+TimeVar</param>
                         </condition>
                     </conditions>
                     <actions>
