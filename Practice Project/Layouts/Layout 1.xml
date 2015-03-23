@@ -84,7 +84,7 @@
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0.5</fade-in-time>
-                                <wait-time>1</wait-time>
+                                <wait-time>3</wait-time>
                                 <fade-out-time>0.5</fade-out-time>
                                 <destroy>No</destroy>
                             </properties>
@@ -113,54 +113,13 @@
                         <x>294</x>
                         <y>832</y>
                         <z>0</z>
-                        <width>73.333328247</width>
-                        <height>73.333328247</height>
+                        <width>159.999984741</width>
+                        <height>146.222213745</height>
                         <depth>0</depth>
-                        <hotspotX>0.5030303</hotspotX>
-                        <hotspotY>0.5030303</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50151974</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="second" uid="3">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0.313</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>0.312</fade-out-time>
-                                <destroy>No</destroy>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="CustomMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>5</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>776</x>
-                        <y>1171</y>
-                        <z>0</z>
-                        <width>100</width>
-                        <height>100</height>
-                        <depth>0</depth>
-                        <hotspotX>0.50222224</hotspotX>
-                        <hotspotY>0.50222224</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="third" uid="4">
@@ -263,6 +222,47 @@
                         <depth>0</depth>
                         <hotspotX>0.25</hotspotX>
                         <hotspotY>0.474999994</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="go" uid="3">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0.313</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.312</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>856</x>
+                        <y>630</y>
+                        <z>0</z>
+                        <width>160</width>
+                        <height>146.222229004</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502777755</hotspotX>
+                        <hotspotY>0.50151974</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -388,33 +388,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="first_countdown" uid="11">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1027</x>
-                        <y>598</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

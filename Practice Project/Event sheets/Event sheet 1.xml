@@ -76,15 +76,15 @@
                 <action id="-16" name="Wait" sid="6359866707002887" type="System">
                     <param id="0" name="Seconds">0.625</param>
                 </action>
-                <action id="-3" name="Set position" sid="6969909198835729" type="second">
+                <action id="-3" name="Set position" sid="6969909198835729" type="go">
                     <param id="0" name="X">random(862)</param>
                     <param id="1" name="Y">random(477)</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="2189462757728899" type="second" />
+                <action behavior="Fade" id="1" name="Start fade" sid="2189462757728899" type="go" />
                 <action id="-16" name="Wait" sid="9563779571811764" type="System">
                     <param id="0" name="Seconds">0.625</param>
                 </action>
-                <action id="-3" name="Set position" sid="7621358891580744" type="second">
+                <action id="-3" name="Set position" sid="7621358891580744" type="go">
                     <param id="0" name="X">0</param>
                     <param id="1" name="Y">0</param>
                 </action>
@@ -292,7 +292,7 @@
         <event-block sid="2480574853361283">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="2957570504531597" type="Mouse">
-                    <param id="0" name="Object">second</param>
+                    <param id="0" name="Object">go</param>
                 </condition>
             </conditions>
             <actions />
@@ -300,7 +300,7 @@
                 <event-block sid="9723504286365432">
                     <conditions>
                         <condition id="7" name="Cursor is over object" sid="9182391966937171" type="Mouse">
-                            <param id="0" name="Object">second</param>
+                            <param id="0" name="Object">go</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -378,7 +378,7 @@
                 </event-block>
                 <event-block sid="6690248623328662">
                     <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="4042191742439249" type="second">
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="4042191742439249" type="go">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Speed">0</param>
@@ -413,7 +413,7 @@
                 </event-block>
                 <event-block sid="2302087208090549">
                     <conditions>
-                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="9597630891658501" type="second">
+                        <condition behavior="CustomMovement" id="1" name="Compare speed" sid="9597630891658501" type="go">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Speed">0</param>
@@ -426,26 +426,26 @@
                                 <condition id="6" name="On object clicked" sid="6453860085714653" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">second</param>
+                                    <param id="2" name="Object clicked">go</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Flash" id="0" name="Flash" sid="4446998423677698" type="second">
+                                <action behavior="Flash" id="0" name="Flash" sid="4446998423677698" type="go">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                                     <param id="2" name="Duration">0.4</param>
                                 </action>
                                 <action id="-10" name="Add to" sid="6657732416204748" type="System">
                                     <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">int(second.Opacity)</param>
+                                    <param id="1" name="Value">int(go.Opacity)</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="2247518967988298" type="System">
                                     <param id="0" name="Seconds">0.4</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="7994119228935614" type="second">
+                                <action id="-16" name="Set opacity" sid="7994119228935614" type="go">
                                     <param id="0" name="Opacity">0</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="9453957466156463" type="second">
+                                <action id="-3" name="Set position" sid="9453957466156463" type="go">
                                     <param id="0" name="X">-100</param>
                                     <param id="1" name="Y">-100</param>
                                 </action>
