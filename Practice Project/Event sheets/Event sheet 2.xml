@@ -6,6 +6,7 @@
         <variable constant="0" name="x" sid="7296311385571497" static="0" type="number">0</variable>
         <variable constant="0" name="y" sid="2331343709466931" static="0" type="number">0</variable>
         <variable constant="0" name="bool" sid="2654077471499017" static="0" type="number">0</variable>
+        <variable constant="0" name="songLength" sid="1434864933883795" static="0" type="number">0</variable>
         <variable constant="0" name="speed" sid="6884749096248467" static="0" type="number">0</variable>
         <variable constant="0" name="scorable" sid="264021998727257" static="0" type="number">0</variable>
         <event-block sid="1049697548857679">
@@ -43,15 +44,15 @@
                     <param id="0" name="Name">&quot;spawn_tap&quot;</param>
                     <param id="1" name="Parameter {n}">1{###}300{###}400</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="1536875900023668" type="Function">
+                <action id="0" name="Call function" sid="1536875900023668" type="Function">
                     <param id="0" name="Name">&quot;spawn_tap&quot;</param>
                     <param id="1" name="Parameter {n}">3{###}400{###}400</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="8464862511165687" type="Function">
+                <action id="0" name="Call function" sid="8464862511165687" type="Function">
                     <param id="0" name="Name">&quot;spawn_tap&quot;</param>
                     <param id="1" name="Parameter {n}">5{###}100{###}250</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="9247392192284406" type="Function">
+                <action id="0" name="Call function" sid="9247392192284406" type="Function">
                     <param id="0" name="Name">&quot;spawn_tap&quot;</param>
                     <param id="1" name="Parameter {n}">7{###}400{###}100</param>
                 </action>
@@ -134,13 +135,13 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="815609285983824" type="go">
-                                    <param id="0" name="Scale">0.5</param>
+                                    <param id="0" name="Scale">0.35</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="7450688131738693" type="System">
                                     <param id="0" name="Seconds">0.08</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="7988271069505784" type="go">
-                                    <param id="0" name="Scale">0.45</param>
+                                    <param id="0" name="Scale">0.3</param>
                                 </action>
                                 <action behavior="Fade" id="2" name="Set fade-in time" sid="3258880186585926" type="go">
                                     <param id="0" name="Fade-in time">0</param>
@@ -155,10 +156,7 @@
                                 <action id="-16" name="Wait" sid="1669302891484398" type="System">
                                     <param id="0" name="Seconds">0.3</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="9016250574404404" type="go">
-                                    <param id="0" name="X">-200</param>
-                                    <param id="1" name="Y">-200</param>
-                                </action>
+                                <action id="-9" name="Destroy" sid="9016250574404404" type="go" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -219,18 +217,33 @@
                 <condition id="-2" name="On start of layout" sid="4354558235465128" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="-16" name="Wait" sid="2170861252743636" type="System">
-                    <param id="0" name="Seconds">0.3125</param>
-                </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="7204280454931765" type="first">
-                    <param id="0" name="Speed">0</param>
-                </action>
                 <action id="7" name="Play (by name)" sid="2096698126030172" type="Audio">
                     <param id="0" name="Folder">0</param>
                     <param id="1" name="Audio file name">&quot;Blank Spaces&quot;</param>
                     <param id="3" name="Loop">0</param>
                     <param id="4" name="Volume">0</param>
                     <param id="2" name="Tag (optional)">&quot;blankspace&quot;</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="2170861252743636" type="System">
+                    <param id="0" name="Seconds">0.3125</param>
+                </action>
+                <action id="5" name="Set web font" sid="6566461226817167" type="Text">
+                    <param id="0" name="Family name">&quot;Wire One&quot;</param>
+                    <param id="1" name="CSS URL">&quot;http://fonts.googleapis.com/css?family=Wire+One&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="7020513906663391" type="Text">
+                    <param id="0" name="X">260</param>
+                    <param id="1" name="Y">20</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="7204280454931765" type="first">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="7368681332021683" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="6753306647265018" type="System">
+                    <param id="0" name="Variable">songLength</param>
+                    <param id="1" name="Value">Audio.Duration(&quot;blankspace&quot;)</param>
                 </action>
             </actions>
         </event-block>
@@ -329,6 +342,8 @@
             </conditions>
             <actions />
             <sub-events>
+                <variable constant="0" name="x1" sid="6553155119250278" static="0" type="number">0</variable>
+                <variable constant="0" name="y1" sid="2693319887743542" static="0" type="number">0</variable>
                 <event-block sid="6128795206632741">
                     <conditions>
                         <condition id="-7" name="Compare time" sid="8249102507813232" type="System">
@@ -342,23 +357,21 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="6041246823857802" type="System">
-                            <param id="0" name="Variable">x</param>
+                            <param id="0" name="Variable">x1</param>
                             <param id="1" name="Value">Function.Param(1)</param>
                         </action>
                         <action id="-9" name="Set value" sid="2832226449706332" type="System">
-                            <param id="0" name="Variable">y</param>
+                            <param id="0" name="Variable">y1</param>
                             <param id="1" name="Value">Function.Param(2)</param>
                         </action>
-                        <action id="-10" name="Set value" sid="1922183444235788" type="first">
-                            <param id="0" name="Instance variable">countdown</param>
-                            <param id="1" name="Value">3</param>
+                        <action id="-3" name="Create object" sid="8956541774075472" type="System">
+                            <param id="0" name="Object to create">first</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">x1</param>
+                            <param id="3" name="Y">y1</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="5837392146841936" type="first">
                             <param id="0" name="Speed">0</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="9249940931662537" type="first">
-                            <param id="0" name="X">Function.Param(1)</param>
-                            <param id="1" name="Y">Function.Param(2)</param>
                         </action>
                         <action id="3" name="Start" sid="7430594177695013" type="first">
                             <param id="0" name="From">1</param>
@@ -385,25 +398,28 @@
                             <param id="0" name="Variable">scorable</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="5830597264157568" type="go">
-                            <param id="0" name="X">x</param>
-                            <param id="1" name="Y">y</param>
+                        <action id="-3" name="Create object" sid="7118269100389605" type="System">
+                            <param id="0" name="Object to create">go</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">first.X</param>
+                            <param id="3" name="Y">first.Y</param>
                         </action>
-                        <action id="-3" name="Set position" sid="1450958975859296" type="first">
-                            <param id="0" name="X">-200</param>
-                            <param id="1" name="Y">-200</param>
-                        </action>
+                        <action id="-9" name="Destroy" sid="1450958975859296" type="first" />
                         <action id="-16" name="Wait" sid="1851976257084846" type="System">
-                            <param id="0" name="Seconds">1.8</param>
+                            <param id="0" name="Seconds">0.75</param>
                         </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="9875751813404637" type="go">
+                            <param id="0" name="Fade-out time">0.25</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="3738766679598898" type="go" />
                         <action id="-9" name="Set value" sid="2469081554425398" type="System">
                             <param id="0" name="Variable">scorable</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="4325391113207836" type="go">
-                            <param id="0" name="X">-200</param>
-                            <param id="1" name="Y">-200</param>
+                        <action id="-16" name="Wait" sid="3154275958136663" type="System">
+                            <param id="0" name="Seconds">0.25</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="4325391113207836" type="go" />
                     </actions>
                 </event-block>
                 <event-block sid="2402682329838179">
@@ -428,12 +444,12 @@
                 </condition>
                 <condition id="-7" name="Compare time" sid="7256400741363384" type="System">
                     <param id="0" name="Comparison">5</param>
-                    <param id="1" name="Time (seconds)">2</param>
+                    <param id="1" name="Time (seconds)">4</param>
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="3" name="Set progress" sid="9015260046475303" type="ProgressBar">
-                    <param id="0" name="Value">(time/Audio.Duration(&quot;blankspace&quot;))*100</param>
+                <action id="3" name="Set progress" sid="9015260046475303" type="ProgressBar">
+                    <param id="0" name="Value">(time/songLength)*100</param>
                 </action>
             </actions>
         </event-block>

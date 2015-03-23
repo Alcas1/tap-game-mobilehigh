@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>36fs1buuh48hh</unique-id>
-    <saved-with-version>19500</saved-with-version>
+    <saved-with-version>20000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -295,8 +295,6 @@
                 <reference-distance>600</reference-distance>
                 <maximum-distance>10000</maximum-distance>
                 <roll-off-factor>1</roll-off-factor>
-                <speed-of-sound>5000</speed-of-sound>
-                <doppler-factor>1</doppler-factor>
             </properties>
         </global-instance>
     </global-instances>
