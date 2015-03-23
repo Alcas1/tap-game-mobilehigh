@@ -347,7 +347,7 @@
                         </condition>
                         <condition id="-7" name="Compare time" sid="7687632288395425" type="System">
                             <param id="0" name="Comparison">3</param>
-                            <param id="1" name="Time (seconds)">Function.Param(0)+0.05</param>
+                            <param id="1" name="Time (seconds)">Function.Param(0)+0.08</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -435,7 +435,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="3" name="Set progress" sid="9015260046475303" type="ProgressBar">
+                <action disabled="1" id="3" name="Set progress" sid="9015260046475303" type="ProgressBar">
                     <param id="0" name="Value">(time/songLength)*100</param>
                 </action>
             </actions>
