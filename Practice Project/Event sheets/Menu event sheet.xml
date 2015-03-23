@@ -4,8 +4,14 @@
     <name>Menu event sheet</name>
     <events>
         <event-block sid="601341122262488">
-            <conditions />
-            <actions />
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7796905437462426" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="8857415713755542" type="Audio">
+                    <param id="0" name="Audio file">Blank Spaces</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="8101494832815362">
             <conditions>
