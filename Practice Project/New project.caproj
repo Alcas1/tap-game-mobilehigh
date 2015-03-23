@@ -119,6 +119,9 @@
         </object-type>
         <object-type name="go" sid="758515575725499">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="scorable" sid="667957554185719" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Flash" sid="9846297835814978">
                     <behavior id="Flash" />
