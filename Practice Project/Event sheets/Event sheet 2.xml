@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 2</name>
     <events>
+        <variable constant="0" name="Start" sid="7771784360203882" static="0" type="number">0</variable>
         <variable constant="0" name="TimeVar" sid="8390379144250916" static="0" type="number">0</variable>
         <variable constant="0" name="x" sid="7296311385571497" static="0" type="number">0</variable>
         <variable constant="0" name="y" sid="2331343709466931" static="0" type="number">0</variable>
@@ -27,6 +28,11 @@
         <event-block sid="738110468890911">
             <conditions>
                 <condition id="-1" name="Every tick" sid="8477193338668858" type="System" />
+                <condition id="-14" name="Compare variable" sid="9622579600349619" type="System">
+                    <param id="0" name="Variable">Start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="2330637221790888" type="Text">
@@ -248,6 +254,13 @@
                 <action id="-10" name="Add to" sid="9535678113573617" type="System">
                     <param id="0" name="Variable">TimeVar</param>
                     <param id="1" name="Value">time</param>
+                </action>
+                <action id="-9" name="Set value" sid="5595102426390151" type="System">
+                    <param id="0" name="Variable">Start</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="3798546098971609" type="System">
+                    <param id="0" name="Time scale">1.6</param>
                 </action>
             </actions>
         </event-block>
