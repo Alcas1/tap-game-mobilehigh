@@ -267,6 +267,12 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Demo57" sid="5370720148094401">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Demo53" sid="1969346992047428">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -303,9 +309,18 @@
     </global-instances>
     <sounds-folder />
     <music-folder>
-        <file name="Blank Spaces.ogg" />
         <file name="Demo25.m4a" />
         <file name="Demo53.m4a" />
+        <file name="Demo40.m4a" />
+        <file name="Demo57.m4a" />
+        <file name="Empty_Space_Experiemental_Demo_.m4a" />
+        <file name="Demo2.ogg" />
+        <file name="Demo25.ogg" />
+        <file name="Demo40.ogg" />
+        <file name="Demo53.ogg" />
+        <file name="Demo57.ogg" />
+        <file name="Empty_Space_Experiemental_Demo_.ogg" />
+        <file name="Demo2.m4a" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
