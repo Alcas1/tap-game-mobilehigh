@@ -6,20 +6,66 @@
         <variable constant="0" name="Loadtime" sid="714661472528479" static="0" type="number">0</variable>
         <event-block sid="3506230543666512">
             <conditions>
-                <condition id="-7" name="Compare time" sid="373697511293017" type="System">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Time (seconds)">7.2+Loadtime</param>
-                </condition>
+                <condition id="1" name="Preloads complete" sid="373697511293017" type="Audio" />
             </conditions>
             <actions>
-                <action id="22" name="Set paused" sid="2028354783666507" type="Audio">
-                    <param id="0" name="Tag">&quot;music&quot;</param>
-                    <param id="1" name="State">1</param>
-                </action>
                 <action id="-2" name="Go to layout" sid="6915869345707145" type="System">
                     <param id="0" name="Layout">Layout 1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="2757109745092364">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7804608060847507" type="System">
+                            <param id="0" name="Variable">BPM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="8448397510498636" type="Audio">
+                            <param id="0" name="Audio file">Demo40</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="748774072269096">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8093889274481787" type="System">
+                            <param id="0" name="Variable">BPM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">96</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1860528365964648" type="Audio">
+                            <param id="0" name="Audio file">Demo57</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1041484592925251">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2492450751026978" type="System">
+                            <param id="0" name="Variable">BPM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">130</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="7297659242383808" type="Audio">
+                            <param id="0" name="Audio file">Demo53</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="1778709249914373">
             <conditions>
@@ -41,11 +87,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="4744385238008214" type="Audio">
+                        <action id="4" name="Preload" sid="7539733720890477" type="Audio">
                             <param id="0" name="Audio file">Demo40</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -58,11 +101,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="3358389056735353" type="Audio">
+                        <action id="4" name="Preload" sid="8575957415425273" type="Audio">
                             <param id="0" name="Audio file">Demo57</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -75,32 +115,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="1679289559943859" type="Audio">
+                        <action id="4" name="Preload" sid="2460008707443075" type="Audio">
                             <param id="0" name="Audio file">Demo53</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="1668678143844332">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="1025217878961121" type="System" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="1154312060943948">
-                    <conditions>
-                        <condition id="5" name="Is tag playing" sid="4501955961441712" type="Audio">
-                            <param id="0" name="Tag">&quot;music&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="22" name="Set paused" sid="4272340744872796" type="Audio">
-                            <param id="0" name="Tag">&quot;music&quot;</param>
-                            <param id="1" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>

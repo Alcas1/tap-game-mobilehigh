@@ -353,7 +353,7 @@
                 <action disabled="1" id="-16" name="Wait" sid="2170861252743636" type="System">
                     <param id="0" name="Seconds">0.3125</param>
                 </action>
-                <action disabled="1" id="22" name="Set paused" sid="6897558066851423" type="Audio">
+                <action id="22" name="Set paused" sid="9280292939724483" type="Audio">
                     <param id="0" name="Tag">&quot;music&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
