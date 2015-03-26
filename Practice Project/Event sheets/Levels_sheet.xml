@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Levels_sheet</name>
+    <events>
+        <event-block sid="9103194909890676">
+            <conditions>
+                <condition id="17" name="On tap object" sid="5976262815185599" type="Touch">
+                    <param id="0" name="Object">level_1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="362462312476269" type="level_1">
+                    <param id="0" name="Animation">&quot;press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6858636624755987" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="5965279186025564" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8302877086743084">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6612024455750868" type="Touch">
+                    <param id="0" name="Object">level_2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6710552246166751" type="level_2">
+                    <param id="0" name="Animation">&quot;press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="4727761606856837" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="118362082778655" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7530719991451828">
+            <conditions>
+                <condition id="17" name="On tap object" sid="1917669362509767" type="Touch">
+                    <param id="0" name="Object">level_3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7869092146527658" type="level_3">
+                    <param id="0" name="Animation">&quot;press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="7812242274424179" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="5425020081604252" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
