@@ -2,7 +2,7 @@
 <c2layout>
     <name>LoadingScreen</name>
     <sid>1153330562084457</sid>
-    <event-sheet>Event sheet 3</event-sheet>
+    <event-sheet>loading_sheet</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>

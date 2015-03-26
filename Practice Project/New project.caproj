@@ -482,7 +482,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="362881714045162" speed="1">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\button_red1.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\button_red3.png">
                         <collision-poly>
                             <point x="0.183333" y="0.200608" />
                             <point x="0.5" y="0.12462" />
@@ -506,7 +506,7 @@
                             <point x="0.00833333" y="0.49848" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\button_red3.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\button_red1.png">
                         <collision-poly>
                             <point x="0.183333" y="0.200608" />
                             <point x="0.5" y="0.12462" />
@@ -550,7 +550,7 @@
         <event-sheet>Help_Menu_sheet.xml</event-sheet>
         <event-sheet>Levels_sheet.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet 3.xml</event-sheet>
+        <event-sheet>loading_sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="2" />

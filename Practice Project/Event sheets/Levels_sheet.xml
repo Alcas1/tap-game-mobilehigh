@@ -87,7 +87,7 @@
                     <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="7749216179435157" type="System">
-                    <param id="0" name="Layout">LoadingScreen</param>
+                    <param id="0" name="Layout">Homescreen</param>
                 </action>
             </actions>
         </event-block>
