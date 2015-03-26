@@ -3,11 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>loading_sheet</name>
     <events>
+        <variable constant="0" name="Loadtime" sid="714661472528479" static="0" type="number">0</variable>
         <event-block sid="3506230543666512">
             <conditions>
                 <condition id="-7" name="Compare time" sid="373697511293017" type="System">
                     <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Time (seconds)">7.2</param>
+                    <param id="1" name="Time (seconds)">7.2+Loadtime</param>
                 </condition>
             </conditions>
             <actions>
@@ -76,6 +77,17 @@
                 <action id="22" name="Set paused" sid="8436857498817744" type="Audio">
                     <param id="0" name="Tag">&quot;music&quot;</param>
                     <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1778709249914373">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5084080299237362" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="4593039518960781" type="System">
+                    <param id="0" name="Variable">Loadtime</param>
+                    <param id="1" name="Value">time</param>
                 </action>
             </actions>
         </event-block>
