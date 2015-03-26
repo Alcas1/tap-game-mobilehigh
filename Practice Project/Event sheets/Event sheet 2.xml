@@ -39,14 +39,6 @@
                 <action id="0" name="Set text" sid="2330637221790888" type="Text">
                     <param id="0" name="Text">Score</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="6174287908554794" type="Function">
-                    <param id="0" name="Name">&quot;move_stop&quot;</param>
-                    <param id="1" name="Parameter {n}">4{###}200{###}250</param>
-                </action>
-                <action disabled="1" id="0" name="Call function" sid="7380093882157635" type="Function">
-                    <param id="0" name="Name">&quot;move_stop&quot;</param>
-                    <param id="1" name="Parameter {n}">4{###}300{###}100</param>
-                </action>
                 <action id="0" name="Call function" sid="3237415672248373" type="Function">
                     <param id="0" name="Name">&quot;spawn_tap&quot;</param>
                     <param id="1" name="Parameter {n}">5{###}300{###}400</param>
@@ -68,6 +60,10 @@
                     <param id="1" name="Parameter {n}">13{###}250{###}100</param>
                 </action>
                 <action id="0" name="Call function" sid="8608736846450088" type="Function">
+                    <param id="0" name="Name">&quot;spawn_tap&quot;</param>
+                    <param id="1" name="Parameter {n}">15{###}100{###}100</param>
+                </action>
+                <action id="0" name="Call function" sid="4547556725504818" type="Function">
                     <param id="0" name="Name">&quot;spawn_tap&quot;</param>
                     <param id="1" name="Parameter {n}">15{###}100{###}100</param>
                 </action>
@@ -258,6 +254,23 @@
                 </action>
             </actions>
             <sub-events>
+                <event-block sid="3366557142604346">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1592643971727697" type="System">
+                            <param id="0" name="Variable">BPM</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="3403674120315152" type="Audio">
+                            <param id="0" name="Audio file">Demo40</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="8787073635830307">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="5514097431793374" type="System">
