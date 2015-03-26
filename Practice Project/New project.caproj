@@ -474,6 +474,65 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TiledBackground11" sid="8029802508129412">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\background2.png" />
+        </object-type>
+        <object-type name="loadingBar" sid="2083108509348122">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="362881714045162" speed="1">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\button_red1.png">
+                        <collision-poly>
+                            <point x="0.183333" y="0.200608" />
+                            <point x="0.5" y="0.12462" />
+                            <point x="0.813889" y="0.203647" />
+                            <point x="0.988889" y="0.49848" />
+                            <point x="0.813889" y="0.796353" />
+                            <point x="0.5" y="0.808511" />
+                            <point x="0.186111" y="0.796353" />
+                            <point x="0.00833333" y="0.49848" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\button_red2.png">
+                        <collision-poly>
+                            <point x="0.183333" y="0.200608" />
+                            <point x="0.5" y="0.12462" />
+                            <point x="0.813889" y="0.203647" />
+                            <point x="0.988889" y="0.49848" />
+                            <point x="0.813889" y="0.796353" />
+                            <point x="0.5" y="0.808511" />
+                            <point x="0.186111" y="0.796353" />
+                            <point x="0.00833333" y="0.49848" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\button_red3.png">
+                        <collision-poly>
+                            <point x="0.183333" y="0.200608" />
+                            <point x="0.5" y="0.12462" />
+                            <point x="0.813889" y="0.203647" />
+                            <point x="0.988889" y="0.49848" />
+                            <point x="0.813889" y="0.796353" />
+                            <point x="0.5" y="0.808511" />
+                            <point x="0.186111" y="0.796353" />
+                            <point x="0.00833333" y="0.49848" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\button_green.png">
+                        <collision-poly>
+                            <point x="0.183333" y="0.200608" />
+                            <point x="0.5" y="0.12462" />
+                            <point x="0.813889" y="0.203647" />
+                            <point x="0.988889" y="0.49848" />
+                            <point x="0.813889" y="0.796353" />
+                            <point x="0.5" y="0.808511" />
+                            <point x="0.186111" y="0.796353" />
+                            <point x="0.00833333" y="0.49848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -483,6 +542,7 @@
         <layout>Help_Menu.xml</layout>
         <layout>Levels.xml</layout>
         <layout>Score.xml</layout>
+        <layout>LoadingScreen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 2.xml</event-sheet>
@@ -490,6 +550,7 @@
         <event-sheet>Help_Menu_sheet.xml</event-sheet>
         <event-sheet>Levels_sheet.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 3.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="2" />

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 3</name>
+    <events>
+        <event-block sid="3506230543666512">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="373697511293017" type="System">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Time (seconds)">7.2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6915869345707145" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
