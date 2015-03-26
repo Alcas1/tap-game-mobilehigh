@@ -456,7 +456,7 @@
                             <param id="0" name="Frame number">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="707666798379974" type="System">
-                            <param id="0" name="Seconds">1</param>
+                            <param id="0" name="Seconds">0.9</param>
                         </action>
                         <action id="-3" name="Create object" sid="7118269100389605" type="System">
                             <param id="0" name="Object to create">go</param>
@@ -503,11 +503,7 @@
                     <param id="1" name="Time (seconds)">4</param>
                 </condition>
             </conditions>
-            <actions>
-                <action disabled="1" id="3" name="Set progress" sid="9015260046475303" type="ProgressBar">
-                    <param id="0" name="Value">(time/songLength)*100</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
         <event-block any="1" sid="7525236088672059">
             <conditions>

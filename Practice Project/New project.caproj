@@ -20,7 +20,6 @@
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -231,9 +230,6 @@
         </object-type>
         <object-type name="Touch" sid="3991741647068417">
             <plugin id="Touch" />
-        </object-type>
-        <object-type name="ProgressBar" sid="7740373567137271">
-            <plugin id="progressbar" />
         </object-type>
         <object-type name="Audio" sid="3436106136447898">
             <plugin id="Audio" />
