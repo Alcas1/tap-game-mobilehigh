@@ -72,5 +72,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="8503173081999122">
+            <conditions>
+                <condition id="17" name="On tap object" sid="7832906511002086" type="Touch">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7074178741062522" type="Sprite">
+                    <param id="0" name="Animation">&quot;press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="7072597511328849" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7749216179435157" type="System">
+                    <param id="0" name="Layout">Homescreen</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

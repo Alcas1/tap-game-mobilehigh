@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="8578748533643648">
+            <conditions>
+                <condition id="17" name="On tap object" sid="2594998617322335" type="Touch">
+                    <param id="0" name="Object">Sprite2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4538826235718501" type="Sprite2">
+                    <param id="0" name="Animation">&quot;press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="521176981561792" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="6408734845581473" type="System">
+                    <param id="0" name="Layout">Levels</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3241060208131994">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4055247869207606" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2547222912819773" type="FinalScore">
+                    <param id="0" name="Text">score</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

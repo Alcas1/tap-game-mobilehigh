@@ -398,6 +398,82 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite" sid="9629214535532282">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1224757270439926" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\backbutton_unpressed.png">
+                        <collision-poly>
+                            <point x="0.0429293" y="0.137097" />
+                            <point x="0.5" y="0" />
+                            <point x="0.954545" y="0.145161" />
+                            <point x="0.997475" y="0.5" />
+                            <point x="0.95202" y="0.846774" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0454545" y="0.854839" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="press" pingpong="0" repeatcount="1" repeatto="0" sid="1037878438112273" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\backbutton_pressed.png">
+                        <collision-poly>
+                            <point x="0.0429293" y="0.137097" />
+                            <point x="0.5" y="0" />
+                            <point x="0.954545" y="0.145161" />
+                            <point x="1" y="0.5" />
+                            <point x="0.954545" y="0.854839" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0454545" y="0.854839" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground10" sid="1853316411544301">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\background2.png" />
+        </object-type>
+        <object-type name="TextBox3" sid="59870027686447">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="FinalScore" sid="1615132059911712">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite2" sid="5684947251313227">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2405963701588197" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\backbutton_unpressed.png">
+                        <collision-poly>
+                            <point x="0.0429293" y="0.137097" />
+                            <point x="0.5" y="0" />
+                            <point x="0.954545" y="0.145161" />
+                            <point x="0.997475" y="0.5" />
+                            <point x="0.95202" y="0.846774" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0454545" y="0.854839" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="press" pingpong="0" repeatcount="1" repeatto="0" sid="4444711220127397" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Amelia\Documents\Construct 2 Projects\Practice Project\backbutton_pressed.png">
+                        <collision-poly>
+                            <point x="0.0429293" y="0.137097" />
+                            <point x="0.5" y="0" />
+                            <point x="0.954545" y="0.145161" />
+                            <point x="1" y="0.5" />
+                            <point x="0.954545" y="0.854839" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0454545" y="0.854839" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -406,12 +482,14 @@
         <layout>Homescreen.xml</layout>
         <layout>Help_Menu.xml</layout>
         <layout>Levels.xml</layout>
+        <layout>Score.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>Homescreen_sheet.xml</event-sheet>
         <event-sheet>Help_Menu_sheet.xml</event-sheet>
         <event-sheet>Levels_sheet.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="2" />
