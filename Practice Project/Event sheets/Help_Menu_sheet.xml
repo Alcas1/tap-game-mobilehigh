@@ -15,7 +15,7 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="38892762365323" type="System">
-                    <param id="0" name="Seconds">1.0</param>
+                    <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="8155247686363796" type="System">
                     <param id="0" name="Layout">Homescreen</param>

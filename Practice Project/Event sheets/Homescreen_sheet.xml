@@ -15,7 +15,7 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="3675913423940054" type="System">
-                    <param id="0" name="Seconds">1.0</param>
+                    <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="1992436034214299" type="System">
                     <param id="0" name="Layout">Levels</param>
@@ -34,7 +34,7 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="2251080574001632" type="System">
-                    <param id="0" name="Seconds">1.0</param>
+                    <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="9693907185873181" type="System">
                     <param id="0" name="Layout">Help_Menu</param>
