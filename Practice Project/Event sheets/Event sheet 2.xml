@@ -11,21 +11,6 @@
         <variable constant="0" name="bool" sid="2654077471499017" static="0" type="number">0</variable>
         <variable constant="0" name="songLength" sid="1434864933883795" static="0" type="number">0</variable>
         <variable constant="0" name="speed" sid="6884749096248467" static="0" type="number">0</variable>
-        <event-block sid="1049697548857679">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="9282184928440337" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="1565467687435085" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="738110468890911">
             <conditions>
                 <condition id="-1" name="Every tick" sid="8477193338668858" type="System" />
@@ -36,9 +21,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="2330637221790888" type="Text">
-                    <param id="0" name="Text">Score</param>
-                </action>
                 <action id="0" name="Call function" sid="3237415672248373" type="Function">
                     <param id="0" name="Name">&quot;spawn_tap&quot;</param>
                     <param id="1" name="Parameter {n}">5{###}600{###}400</param>
@@ -105,12 +87,7 @@
                                             <param id="0" name="Interval (seconds)">0.1</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="1585228495985336" type="System">
-                                            <param id="0" name="Variable">Score</param>
-                                            <param id="1" name="Value">5</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -140,10 +117,6 @@
                                 <action id="-10" name="Set value" sid="6034711699000709" type="go">
                                     <param id="0" name="Instance variable">scorable</param>
                                     <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="1036243301282618" type="System">
-                                    <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">50</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="815609285983824" type="go">
                                     <param id="0" name="Scale">0.35</param>

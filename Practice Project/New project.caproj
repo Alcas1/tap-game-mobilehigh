@@ -63,14 +63,6 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\Jeff\Desktop\Construct 2 Projects\Practice Project\MobiLehighBackgroundMain.png" />
         </object-type>
-        <object-type name="Sprite" sid="7340297677307272">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9524106910013313" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="first" sid="6014427815575477">
             <plugin id="Sprite" />
             <instance-variables>
@@ -100,22 +92,6 @@
         </object-type>
         <object-type name="Mouse" sid="390266993364874">
             <plugin id="Mouse" />
-        </object-type>
-        <object-type name="Sprite3" sid="2774162576070843">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Flash" sid="7893000864041459">
-                    <behavior id="Flash" />
-                </behavior-type>
-                <behavior-type name="Fade" sid="7659768482685188">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7896773317051028" speed="5">
-                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502222" original-source="C:\Users\Jeff\Desktop\Practice Construct 2\Circle.png" />
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="go" sid="758515575725499">
             <plugin id="Sprite" />
@@ -148,65 +124,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="third" sid="8618249170851552">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Flash" sid="9690418708840987">
-                    <behavior id="Flash" />
-                </behavior-type>
-                <behavior-type name="Fade" sid="3401963052723585">
-                    <behavior id="Fade" />
-                </behavior-type>
-                <behavior-type name="CustomMovement" sid="6794801984837728">
-                    <behavior id="custom" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1234419681102417" speed="5">
-                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502222" original-source="C:\Users\Jeff\Desktop\Practice Construct 2\Circle.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="fourth" sid="3857412293370471">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Flash" sid="9983293436966295">
-                    <behavior id="Flash" />
-                </behavior-type>
-                <behavior-type name="Fade" sid="2260686337862644">
-                    <behavior id="Fade" />
-                </behavior-type>
-                <behavior-type name="CustomMovement" sid="4092751201229479">
-                    <behavior id="custom" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3967798586420748" speed="5">
-                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502222" original-source="C:\Users\Jeff\Desktop\Practice Construct 2\Circle.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="TextBox" sid="9600072162989862">
             <plugin id="TextBox" />
         </object-type>
         <object-type name="Text" sid="9752436446306622">
             <plugin id="Text" />
-        </object-type>
-        <object-type name="Sprite2" sid="4258248190454619">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="651336270656749" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite4" sid="2508251683561912">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9273808171208222" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="Sprite5" sid="2405593856915745">
             <plugin id="Sprite" />
@@ -244,25 +166,6 @@
         </object-type>
         <object-type name="TextBox2" sid="2737995691552732">
             <plugin id="TextBox" />
-        </object-type>
-        <object-type name="second2" sid="5833891821614235">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Flash" sid="6197706767591149">
-                    <behavior id="Flash" />
-                </behavior-type>
-                <behavior-type name="Fade" sid="204890675250348">
-                    <behavior id="Fade" />
-                </behavior-type>
-                <behavior-type name="CustomMovement" sid="2753389638956853">
-                    <behavior id="custom" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5902265036770505" speed="5">
-                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502222" original-source="C:\Users\Jeff\Desktop\Practice Construct 2\Circle.png" />
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="Demo57" sid="5370720148094401">
             <plugin id="Text" />
@@ -505,9 +408,7 @@
         <layout>Levels.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 2.xml</event-sheet>
-        <event-sheet>Menu event sheet.xml</event-sheet>
         <event-sheet>Homescreen_sheet.xml</event-sheet>
         <event-sheet>Help_Menu_sheet.xml</event-sheet>
         <event-sheet>Levels_sheet.xml</event-sheet>

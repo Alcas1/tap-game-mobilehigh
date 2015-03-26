@@ -10,15 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">Homescreen</layout>
-        <layout order="4">Help_Menu</layout>
-        <layout order="6">Levels</layout>
-        <layout order="8">Layout 1</layout>
+        <layout active="1" order="1">Homescreen</layout>
+        <layout order="3">Help_Menu</layout>
+        <layout order="5">Levels</layout>
+        <layout order="7">Layout 1</layout>
         <event-sheet order="0">Event sheet 2</event-sheet>
-        <event-sheet order="1">Menu event sheet</event-sheet>
-        <event-sheet active="1" order="3">Homescreen_sheet</event-sheet>
-        <event-sheet order="5">Help_Menu_sheet</event-sheet>
-        <event-sheet order="7">Levels_sheet</event-sheet>
+        <event-sheet order="2">Homescreen_sheet</event-sheet>
+        <event-sheet order="4">Help_Menu_sheet</event-sheet>
+        <event-sheet order="6">Levels_sheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,16 +34,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/first/" />
-        <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/go/" />
-        <folder expanded="1" path="animation-folder/third/" />
-        <folder expanded="1" path="animation-folder/fourth/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
-        <folder expanded="1" path="animation-folder/Sprite4/" />
         <folder expanded="1" path="animation-folder/Sprite5/" />
-        <folder expanded="1" path="animation-folder/second2/" />
         <folder expanded="1" path="animation-folder/play/" />
         <folder expanded="1" path="animation-folder/help/" />
         <folder expanded="1" path="animation-folder/back/" />
