@@ -6,7 +6,10 @@
         <variable constant="0" name="Loadtime" sid="714661472528479" static="0" type="number">0</variable>
         <event-block sid="3506230543666512">
             <conditions>
-                <condition id="1" name="Preloads complete" sid="373697511293017" type="Audio" />
+                <condition id="-7" name="Compare time" sid="373697511293017" type="System">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Time (seconds)">Loadtime + 6</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="6915869345707145" type="System">
@@ -17,9 +20,9 @@
                 <event-block sid="2757109745092364">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="7804608060847507" type="System">
-                            <param id="0" name="Variable">BPM</param>
+                            <param id="0" name="Variable">Song</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">120</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -34,9 +37,9 @@
                 <event-block sid="748774072269096">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="8093889274481787" type="System">
-                            <param id="0" name="Variable">BPM</param>
+                            <param id="0" name="Variable">Song</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">96</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -51,9 +54,9 @@
                 <event-block sid="1041484592925251">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="2492450751026978" type="System">
-                            <param id="0" name="Variable">BPM</param>
+                            <param id="0" name="Variable">Song</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">130</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -86,11 +89,7 @@
                             <param id="2" name="Value">120</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Preload" sid="7539733720890477" type="Audio">
-                            <param id="0" name="Audio file">Demo40</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="2718605703121247">
                     <conditions>
@@ -100,11 +99,7 @@
                             <param id="2" name="Value">96</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Preload" sid="8575957415425273" type="Audio">
-                            <param id="0" name="Audio file">Demo57</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="1931745881435054">
                     <conditions>
@@ -114,11 +109,7 @@
                             <param id="2" name="Value">130</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Preload" sid="2460008707443075" type="Audio">
-                            <param id="0" name="Audio file">Demo53</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>

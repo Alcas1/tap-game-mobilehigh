@@ -38,7 +38,7 @@
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
     <first-layout>Homescreen</first-layout>
-    <use-loader-layout>1</use-loader-layout>
+    <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
@@ -537,7 +537,6 @@
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
-        <layout>Menu.xml</layout>
         <layout>Homescreen.xml</layout>
         <layout>Help_Menu.xml</layout>
         <layout>Levels.xml</layout>

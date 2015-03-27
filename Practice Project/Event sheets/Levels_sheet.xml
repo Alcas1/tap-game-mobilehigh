@@ -43,7 +43,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="2920936254215872" type="System">
                     <param id="0" name="Variable">BPM</param>
-                    <param id="1" name="Value">130</param>
+                    <param id="1" name="Value">120</param>
                 </action>
                 <action id="-16" name="Wait" sid="4727761606856837" type="System">
                     <param id="0" name="Seconds">0.5</param>
