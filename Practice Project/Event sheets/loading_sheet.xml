@@ -3,70 +3,95 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>loading_sheet</name>
     <events>
+        <variable constant="0" name="RestartLoad" sid="6333630819633589" static="0" type="number">0</variable>
         <variable constant="0" name="Loadtime" sid="714661472528479" static="0" type="number">0</variable>
-        <event-block sid="3506230543666512">
+        <event-block sid="6375042352270471">
             <conditions>
-                <condition id="-7" name="Compare time" sid="373697511293017" type="System">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Time (seconds)">Loadtime + 6</param>
-                </condition>
+                <condition id="-1" name="Every tick" sid="3041928648083352" type="System" />
             </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="6915869345707145" type="System">
-                    <param id="0" name="Layout">Layout 1</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
-                <event-block sid="2757109745092364">
+                <event-block sid="3506230543666512">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="7804608060847507" type="System">
-                            <param id="0" name="Variable">Song</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="-7" name="Compare time" sid="373697511293017" type="System">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Time (seconds)">Loadtime + 6</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="8448397510498636" type="Audio">
-                            <param id="0" name="Audio file">Demo40</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                        <action id="-2" name="Go to layout" sid="6915869345707145" type="System">
+                            <param id="0" name="Layout">Layout 1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3011274062319332" type="System">
+                            <param id="0" name="Variable">RestartMap</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="748774072269096">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="8093889274481787" type="System">
-                            <param id="0" name="Variable">Song</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="1860528365964648" type="Audio">
-                            <param id="0" name="Audio file">Demo57</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1041484592925251">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="2492450751026978" type="System">
-                            <param id="0" name="Variable">Song</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="7297659242383808" type="Audio">
-                            <param id="0" name="Audio file">Demo53</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="2757109745092364">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7804608060847507" type="System">
+                                    <param id="0" name="Variable">Song</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="8448397510498636" type="Audio">
+                                    <param id="0" name="Audio file">Demo40</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="211491838218761" type="System">
+                                    <param id="0" name="Variable">songLength</param>
+                                    <param id="1" name="Value">39</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="748774072269096">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8093889274481787" type="System">
+                                    <param id="0" name="Variable">Song</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="1860528365964648" type="Audio">
+                                    <param id="0" name="Audio file">Demo57</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6823904370215068" type="System">
+                                    <param id="0" name="Variable">songLength</param>
+                                    <param id="1" name="Value">85</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1041484592925251">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2492450751026978" type="System">
+                                    <param id="0" name="Variable">Song</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="7297659242383808" type="Audio">
+                                    <param id="0" name="Audio file">Demo53</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1483512826754829" type="System">
+                                    <param id="0" name="Variable">songLength</param>
+                                    <param id="1" name="Value">167</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -75,9 +100,15 @@
                 <condition id="-2" name="On start of layout" sid="5084080299237362" type="System" />
             </conditions>
             <actions>
-                <action id="-10" name="Add to" sid="4593039518960781" type="System">
+                <action id="-9" name="Set value" sid="4593039518960781" type="System">
                     <param id="0" name="Variable">Loadtime</param>
                     <param id="1" name="Value">time</param>
+                </action>
+                <action id="-3" name="Create object" sid="4052844835000113" type="System">
+                    <param id="0" name="Object to create">first</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">200</param>
+                    <param id="3" name="Y">200</param>
                 </action>
             </actions>
             <sub-events>
@@ -112,6 +143,28 @@
                     <actions />
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="4419881988846078">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3591530776736172" type="System">
+                    <param id="0" name="Variable">RestartLoad</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7366595819983411" type="System">
+                    <param id="0" name="Variable">RestartLoad</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="721715208763327" type="System">
+                    <param id="0" name="Object to create">go</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">100</param>
+                    <param id="3" name="Y">100</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="2668448069891783" type="System" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
