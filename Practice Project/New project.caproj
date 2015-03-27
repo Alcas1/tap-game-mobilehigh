@@ -551,7 +551,7 @@
         <event-sheet>Homescreen_sheet.xml</event-sheet>
         <event-sheet>Help_Menu_sheet.xml</event-sheet>
         <event-sheet>Levels_sheet.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Score_sheet.xml</event-sheet>
         <event-sheet>loading_sheet.xml</event-sheet>
     </event-folder>
     <global-instances>

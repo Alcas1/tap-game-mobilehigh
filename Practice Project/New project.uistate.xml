@@ -16,12 +16,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="5">Levels</layout>
         <layout order="7">Layout 1</layout>
         <layout order="10">LoadingScreen</layout>
-        <event-sheet order="2">Homescreen_sheet</event-sheet>
+        <event-sheet active="1" order="2">Homescreen_sheet</event-sheet>
         <event-sheet order="4">Help_Menu_sheet</event-sheet>
         <event-sheet order="6">Levels_sheet</event-sheet>
         <event-sheet order="8">loading_sheet</event-sheet>
-        <event-sheet order="9">Event sheet 1</event-sheet>
-        <event-sheet active="1" order="11">Event sheet 2</event-sheet>
+        <event-sheet order="9">Score_sheet</event-sheet>
+        <event-sheet order="11">Event sheet 2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

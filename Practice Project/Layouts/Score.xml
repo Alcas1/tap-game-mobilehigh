@@ -2,7 +2,7 @@
 <c2layout>
     <name>Score</name>
     <sid>7332530286306911</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Score_sheet</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -51,10 +51,10 @@
                 </instance>
                 <instance type="FinalScore" uid="12">
                     <properties>
-                        <text>Text</text>
+                        <text>&quot;Score&quot; &amp; score</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
+                        <font>Arial,-80,400,0</font>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>

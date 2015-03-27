@@ -95,10 +95,10 @@
                 </instance>
                 <instance type="Text2" uid="11">
                     <properties>
-                        <text>Version 1</text>
+                        <text>Version 2</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -108,8 +108,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>366</x>
-                        <y>113</y>
+                        <x>726</x>
+                        <y>422</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
