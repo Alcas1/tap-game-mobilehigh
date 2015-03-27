@@ -24,6 +24,10 @@
                 <action id="-2" name="Go to layout" sid="5965279186025564" type="System">
                     <param id="0" name="Layout">LoadingScreen</param>
                 </action>
+                <action id="-9" name="Set value" sid="3548703322735945" type="System">
+                    <param id="0" name="Variable">Song</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="8302877086743084">
@@ -47,6 +51,10 @@
                 <action id="-2" name="Go to layout" sid="118362082778655" type="System">
                     <param id="0" name="Layout">LoadingScreen</param>
                 </action>
+                <action id="-9" name="Set value" sid="8825220284355496" type="System">
+                    <param id="0" name="Variable">Song</param>
+                    <param id="1" name="Value">2</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7530719991451828">
@@ -69,6 +77,10 @@
                 </action>
                 <action id="-2" name="Go to layout" sid="5425020081604252" type="System">
                     <param id="0" name="Layout">LoadingScreen</param>
+                </action>
+                <action id="-9" name="Set value" sid="4785881948877555" type="System">
+                    <param id="0" name="Variable">Song</param>
+                    <param id="1" name="Value">3</param>
                 </action>
             </actions>
         </event-block>
