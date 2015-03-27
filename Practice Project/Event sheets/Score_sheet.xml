@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Score_sheet</name>
     <events>
+        <variable constant="0" name="scorescreen" sid="5665302619680242" static="0" type="number">0</variable>
         <event-block sid="8578748533643648">
             <conditions>
                 <condition id="17" name="On tap object" sid="2594998617322335" type="Touch">
@@ -28,11 +29,11 @@
         </event-block>
         <event-block sid="3241060208131994">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="4055247869207606" type="System" />
+                <condition id="-1" name="Every tick" sid="4055247869207606" type="System" />
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="2547222912819773" type="FinalScore">
-                    <param id="0" name="Text">&quot;Score: &quot; &amp; score</param>
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; scorescreen</param>
                 </action>
             </actions>
         </event-block>

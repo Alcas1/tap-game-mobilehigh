@@ -51,7 +51,7 @@
                 </instance>
                 <instance type="FinalScore" uid="12">
                     <properties>
-                        <text>&quot;Score&quot; &amp; score</text>
+                        <text>&quot;Score: &quot; &amp; scorescreen</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-80,400,0</font>
                         <color>255,255,255</color>
@@ -64,10 +64,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>266</x>
-                        <y>159</y>
+                        <x>111</x>
+                        <y>154</y>
                         <z>0</z>
-                        <width>336</width>
+                        <width>679</width>
                         <height>93</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

@@ -1974,6 +1974,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="1635939402983441" type="System">
+                    <param id="0" name="Variable">scorescreen</param>
+                    <param id="1" name="Value">score</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="8839084742389949" type="System">
                     <param id="0" name="Layout">Score</param>
                 </action>
